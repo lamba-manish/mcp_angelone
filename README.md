@@ -95,7 +95,7 @@ ENVIRONMENT=production
 
 ### **4. Run the Bot**
 ```bash
-python ai_main.py
+python main.py
 ```
 
 ## 🤖 **Usage Guide**
@@ -105,7 +105,6 @@ python ai_main.py
 **Stock Queries:**
 ```
 "RELIANCE current price"     → Live quote with change %
-"Show me TCS quote"         → Full market data
 "Top gainers today"         → Market movers list
 ```
 
@@ -161,12 +160,6 @@ Bot:  📊 RELIANCE Live Quote
       LTP: ₹1,427.90
       Change: 📈 +₹12.50 (+0.88%)
       High: ₹1,435.00 | Low: ₹1,420.15
-
-User: "Buy 1 share at 1425"
-Bot:  🚨 TRADE CONFIRMATION REQUIRED
-      Buy 1 RELIANCE at ₹1,425.00
-      Estimated Value: ₹1,425.00
-      Type "CONFIRM" to proceed
 ```
 
 **Traditional Commands:**
@@ -257,26 +250,6 @@ graph TD
 - User-friendly error messages
 - Automatic retry mechanisms
 
-## 🧪 **Development & Testing**
-
-### **Running Tests**
-```bash
-# Test AI functionality
-python -c "from test_scripts.ai_test import *; asyncio.run(test_ai_functionality())"
-
-# Test broker connectivity
-python -c "from test_scripts.broker_test import *; asyncio.run(test_broker_connection())"
-```
-
-### **Development Mode**
-```bash
-# Enable debug logging
-export DEBUG=True
-export LOG_LEVEL=DEBUG
-
-# Run with hot reload
-python ai_main.py
-```
 
 ## 📈 **Monitoring & Logs**
 
@@ -302,6 +275,7 @@ The bot provides structured logging for monitoring:
 ## 📄 **License**
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+Author- manishlamba002@gmail.com
 
 ---
 
