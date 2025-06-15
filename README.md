@@ -272,10 +272,10 @@ The bot provides structured logging for monitoring:
 4. Update documentation
 5. Submit pull request
 
-## 📄 **License**
+## 📄 **Author**
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-Author- manishlamba002@gmail.com
+-manishlamba002@gmail.com
+-https://www.linkedin.com/in/manish--lamba/
 
 ---
 
