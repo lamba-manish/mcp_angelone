@@ -211,9 +211,9 @@ async def trading_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
-    # Import here to avoid circular imports
-    from .bot import trading_bot
-    broker = trading_bot.get_broker_for_user(user_id)
+    # Get broker from centralized broker manager
+    from .broker_manager import broker_manager
+    broker = await broker_manager.get_broker(user_id)
     
     if not broker:
         await update.message.reply_text(
@@ -523,7 +523,7 @@ async def handle_quote_command(update: Update, context: ContextTypes.DEFAULT_TYP
         await update.message.reply_text(quote_text, parse_mode='Markdown')
         
     except Exception as e:
-        await update.message.reply_text(f"❌ Error fetching quote for {symbol}: {str(e)}")
+        await update.message.reply_text(f"❌ Error fetching quote for {symbol}: {str(e)}") 
 
 
 async def handle_cancel_all_pending_orders_command(update: Update, context: ContextTypes.DEFAULT_TYPE, broker):

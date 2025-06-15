@@ -1,0 +1,44 @@
+[2m2025-06-15T15:18:37.096779Z[0m [[32m[1minfo     [0m] [1m==================================================[0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.096912Z[0m [[32m[1minfo     [0m] [1mTrading Bot Application Starting[0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.096971Z[0m [[32m[1minfo     [0m] [1m==================================================[0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.097029Z[0m [[32m[1minfo     [0m] [1mStarting Trading Bot Application[0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.097067Z[0m [[32m[1minfo     [0m] [1mEnvironment: development      [0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.097100Z[0m [[32m[1minfo     [0m] [1mDebug mode: True              [0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.135158Z[0m [[32m[1minfo     [0m] [1mSession manager started       [0m [[0m[1m[34msrc.telegram_bot.session_manager[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/setMyCommands "HTTP/1.1 200 OK"
+[2m2025-06-15T15:18:37.957232Z[0m [[32m[1minfo     [0m] [1mBot commands menu set successfully[0m [[0m[1m[34msrc.telegram_bot.bot[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.957350Z[0m [[32m[1minfo     [0m] [1mRegistered all bot handlers   [0m [[0m[1m[34msrc.telegram_bot.bot[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.957402Z[0m [[32m[1minfo     [0m] [1mTrading bot initialized successfully[0m [[0m[1m[34msrc.telegram_bot.bot[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.957446Z[0m [[32m[1minfo     [0m] [1mTrading bot initialized successfully[0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:37.957492Z[0m [[32m[1minfo     [0m] [1mStarting trading bot          [0m [[0m[1m[34msrc.telegram_bot.bot[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getMe "HTTP/1.1 200 OK"
+Scheduler started
+Application started
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/deleteWebhook "HTTP/1.1 200 OK"
+[2m2025-06-15T15:18:38.301164Z[0m [[32m[1minfo     [0m] [1mTrading bot started successfully[0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:18:38.301358Z[0m [[32m[1minfo     [0m] [1mApplication startup completed [0m [[0m[1m[34m__main__[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/sendMessage "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/sendMessage "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/sendMessage "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/answerCallbackQuery "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/sendMessage "HTTP/1.1 200 OK"
+[2m2025-06-15T15:19:13.035337Z[0m [[32m[1minfo     [0m] [1mAngelOne broker initialized successfully[0m [[0m[1m[34msrc.brokers.angelone[0m][0m [36mcomponent[0m=[35mtrading_backend[0m
+[2m2025-06-15T15:19:13.643747Z[0m [[32m[1minfo     [0m] [1mSuccessfully logged in to AngelOne[0m [[0m[1m[34msrc.brokers.angelone[0m][0m [36mcomponent[0m=[35mtrading_backend[0m [36muser_id[0m=[35mM242465[0m
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/sendMessage "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/sendMessage "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"

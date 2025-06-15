@@ -62,6 +62,23 @@ class SessionManager:
         logger.info(f"Created new session for user {user_id}")
         return session
     
+    async def get_session_by_user_id(self, user_id: int) -> Optional[UserSession]:
+        """
+        Get user session by user ID only.
+        
+        Args:
+            user_id: Telegram user ID
+            
+        Returns:
+            UserSession or None if not found
+        """
+        if user_id in self._sessions:
+            session = self._sessions[user_id]
+            session.updated_at = datetime.now()
+            logger.debug(f"Retrieved session for user {user_id}")
+            return session
+        return None
+    
     async def update_session(self, user_id: int, state: Optional[UserState] = None, 
                            context: Optional[Dict] = None, **kwargs):
         """

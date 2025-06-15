@@ -443,52 +443,88 @@ class AngelOneBroker(BaseBroker):
     async def get_holdings(self) -> List[Holding]:
         """Get portfolio holdings."""
         try:
-            response_data = await self._make_request(
-                "GET",
-                "/rest/secure/angelbroking/portfolio/v1/getAllHolding"
-            )
+            # Validate authentication first
+            if not await self._validate_authentication():
+                logger.error("Not authenticated - JWT token missing or invalid")
+                # Try to refresh token
+                login_response = await self.login()
+                if not login_response.success:
+                    logger.error("Failed to refresh token", error=login_response.message)
+                    return []
             
-            # AngelOne returns holdings in a nested structure
-            holdings_data = response_data.get("holdings", []) if response_data else []
-            
-            # Handle case where holdings_data might be None or not a list
-            if not holdings_data or not isinstance(holdings_data, list):
-                logger.info("No holdings data or empty response", data=response_data)
-                return []
-            
-            # Convert to our Holding model format
-            holdings = []
-            for holding_data in holdings_data:
-                # Handle case where holding_data might be a string or not a dict
-                if not isinstance(holding_data, dict):
-                    logger.warning("Invalid holding data format", data=holding_data)
-                    continue
-                
-                # Map AngelOne product types to our enum
-                product_type_mapping = {
-                    "DELIVERY": "CNC",
-                    "INTRADAY": "MIS",
-                    "MARGIN": "NRML",
-                    "CNC": "CNC",
-                    "MIS": "MIS",
-                    "NRML": "NRML"
-                }
-                
-                raw_product_type = holding_data.get("product", "CNC")
-                mapped_product_type = product_type_mapping.get(raw_product_type, "CNC")
+            # Make the API call with retry
+            max_retries = 2
+            for attempt in range(max_retries):
+                try:
+                    response_data = await self._make_request(
+                        "GET",
+                        "/rest/secure/angelbroking/portfolio/v1/getAllHolding"
+                    )
                     
-                holdings.append(Holding(
-                    symbol=holding_data.get("tradingsymbol", ""),
-                    exchange=Exchange(holding_data.get("exchange", "NSE")),
-                    quantity=int(holding_data.get("quantity", 0)),
-                    average_price=Decimal(str(holding_data.get("averageprice", 0))),
-                    current_price=Decimal(str(holding_data.get("ltp", 0))),
-                    pnl=Decimal(str(holding_data.get("profitandloss", 0))),
-                    product_type=ProductType(mapped_product_type),
-                    raw_data=holding_data
-                ))
+                    # Log the raw response for debugging
+                    logger.debug("Holdings API response", response=response_data)
+                    
+                    # AngelOne returns holdings in a nested structure
+                    holdings_data = response_data.get("holdings", []) if response_data else []
+                    
+                    # Handle case where holdings_data might be None or not a list
+                    if not holdings_data or not isinstance(holdings_data, list):
+                        logger.info("No holdings data or empty response", data=response_data)
+                        return []
+                    
+                    # Convert to our Holding model format
+                    holdings = []
+                    for holding_data in holdings_data:
+                        # Handle case where holding_data might be a string or not a dict
+                        if not isinstance(holding_data, dict):
+                            logger.warning("Invalid holding data format", data=holding_data)
+                            continue
+                        
+                        # Map AngelOne product types to our enum
+                        product_type_mapping = {
+                            "DELIVERY": "CNC",
+                            "INTRADAY": "MIS",
+                            "MARGIN": "NRML",
+                            "CNC": "CNC",
+                            "MIS": "MIS",
+                            "NRML": "NRML"
+                        }
+                        
+                        raw_product_type = holding_data.get("product", "CNC")
+                        mapped_product_type = product_type_mapping.get(raw_product_type, "CNC")
+                            
+                        holdings.append(Holding(
+                            symbol=holding_data.get("tradingsymbol", ""),
+                            exchange=Exchange(holding_data.get("exchange", "NSE")),
+                            quantity=int(holding_data.get("quantity", 0)),
+                            average_price=Decimal(str(holding_data.get("averageprice", 0))),
+                            current_price=Decimal(str(holding_data.get("ltp", 0))),
+                            pnl=Decimal(str(holding_data.get("profitandloss", 0))),
+                            product_type=ProductType(mapped_product_type),
+                            raw_data=holding_data
+                        ))
+                    
+                    return holdings
+                    
+                except AuthenticationError as auth_error:
+                    logger.error("Authentication error in holdings API", error=str(auth_error))
+                    if attempt < max_retries - 1:
+                        # Try to refresh token and retry
+                        login_response = await self.login()
+                        if not login_response.success:
+                            logger.error("Failed to refresh token", error=login_response.message)
+                            return []
+                        continue
+                    return []
+                except APIError as api_error:
+                    logger.error("API error in holdings API", error=str(api_error))
+                    if "AB2001" in str(api_error) and attempt < max_retries - 1:
+                        # For internal errors, wait a bit and retry
+                        await asyncio.sleep(1)
+                        continue
+                    return []
             
-            return holdings
+            return []
             
         except Exception as e:
             logger.error("Failed to get holdings", error=str(e))

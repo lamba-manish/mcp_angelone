@@ -28,6 +28,14 @@ class Settings(BaseSettings):
         description="AngelOne API base URL"
     )
     
+    # OpenAI Configuration
+    openai_api_key: str = Field(..., description="OpenAI API key")
+    openai_model: str = Field(default="gpt-4.1-nano", description="OpenAI model to use")
+    
+    # Google Search Configuration (optional)
+    google_api_key: Optional[str] = Field(default=None, description="Google API key for search")
+    google_search_engine_id: Optional[str] = Field(default=None, description="Google Search Engine ID")
+    
     # Application Configuration
     log_level: str = Field(default="INFO", description="Logging level")
     debug: bool = Field(default=False, description="Debug mode")

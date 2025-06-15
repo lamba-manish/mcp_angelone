@@ -1,0 +1,89 @@
+nohup: ignoring input
+{"event": "Initialized 5 trading tools", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:40.567786Z"}
+{"event": "MCP Server initialized", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:40.567997Z"}
+{"event": "\ud83d\ude80 Starting Integrated Trading System", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:40.639589Z"}
+{"event": "============================================================", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:40.639717Z"}
+{"event": "\ud83d\udd27 Initializing MCP trading server...", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:40.639767Z"}
+{"event": "Initializing MCP server...", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:40.639810Z"}
+{"user_id": "M242465", "event": "Successfully logged in to AngelOne", "logger": "brokers.angelone", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.184001Z"}
+{"event": "Broker authentication successful", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.184489Z"}
+{"event": "NLP pipeline initialized successfully", "logger": "mcp_server.nlp.pipeline", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.356284Z"}
+{"event": "NLP pipeline initialized successfully", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.356464Z"}
+{"event": "MCP server initialization completed", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.356518Z"}
+{"event": "\u2705 MCP server initialized", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.356559Z"}
+{"event": "\ud83e\udd16 Initializing Telegram bot...", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.356599Z"}
+{"event": "Starting session manager", "logger": "telegram_bot.session_manager", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:41.395353Z"}
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/setMyCommands "HTTP/1.1 200 OK"
+{"event": "Bot commands menu set successfully with MCP integration", "logger": "telegram_bot.bot", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.158865Z"}
+{"event": "Registered all bot handlers including MCP integration", "logger": "telegram_bot.bot", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159010Z"}
+{"event": "Trading bot initialized successfully", "logger": "telegram_bot.bot", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159090Z"}
+{"event": "\u2705 Telegram bot initialized", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159160Z"}
+{"event": "\ud83d\ude80 Starting services...", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159225Z"}
+{"event": "\u2705 Both services started successfully!", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159307Z"}
+{"event": "============================================================", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159375Z"}
+{"event": "\ud83c\udf89 INTEGRATED TRADING SYSTEM IS LIVE!", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159435Z"}
+{"event": "============================================================", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159483Z"}
+{"event": "\ud83d\udcf1 Telegram Bot: Ready to receive messages", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159546Z"}
+{"event": "\ud83e\udde0 MCP Server: Ready to process AI queries", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159596Z"}
+{"event": "\ud83d\udd17 Integration: Natural language -> MCP -> Response", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159646Z"}
+{"event": "============================================================", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159698Z"}
+{"event": "Features available:", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159756Z"}
+{"event": "\u2022 \ud83e\udd16 Natural language trading queries via Telegram", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159804Z"}
+{"event": "\u2022 \ud83d\udcca Real-time portfolio analysis", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159861Z"}
+{"event": "\u2022 \ud83d\udcb9 Live market data integration", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159906Z"}
+{"event": "\u2022 \ud83e\udde0 OpenAI GPT-4.1 powered insights", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159951Z"}
+{"event": "\u2022 \ud83d\udd0c AngelOne broker connectivity", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.159991Z"}
+{"event": "\u2022 \ud83d\udcc8 Technical analysis tools", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.160033Z"}
+{"event": "============================================================", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.160075Z"}
+{"event": "Starting MCP server...", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.160186Z"}
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x716dd987c290>
+Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x716dd88adf10>, 96132.832502333)]']
+connector: <aiohttp.connector.TCPConnector object at 0x716dd88a1910>
+{"event": "Starting trading bot", "logger": "telegram_bot.bot", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.161166Z"}
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getMe "HTTP/1.1 200 OK"
+Application started
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/deleteWebhook "HTTP/1.1 200 OK"
+{"user_id": "M242465", "event": "Successfully logged in to AngelOne", "logger": "brokers.angelone", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.669030Z"}
+{"event": "Broker authentication successful", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.669183Z"}
+{"event": "NLP pipeline initialized successfully", "logger": "mcp_server.nlp.pipeline", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.719664Z"}
+{"event": "NLP pipeline initialized successfully", "logger": "mcp_server.server", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.719973Z"}
+{"event": "\ud83d\uded1 Stopping Integrated Trading System...", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.722422Z"}
+{"event": "\ud83e\udd16 Stopping Telegram bot...", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.722533Z"}
+{"event": "Stopping trading bot", "logger": "telegram_bot.bot", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:42.722598Z"}
+HTTP Request: POST https://api.telegram.org/bot7295999483:AAGlzs5ruOjDzJa8VcVuu2nMtlpP7sRHQsk/getUpdates "HTTP/1.1 200 OK"
+Application is stopping. This might take a moment.
+Application.stop() complete
+{"event": "Stopping session manager", "logger": "telegram_bot.session_manager", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:43.229749Z"}
+{"event": "\u2705 Telegram bot stopped", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:43.230014Z"}
+{"event": "\ud83e\udde0 MCP server stopped", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:43.230159Z"}
+{"event": "\u2705 Integrated Trading System stopped gracefully", "logger": "__main__", "level": "info", "component": "trading_backend", "timestamp": "2025-06-12T16:52:43.230304Z"}
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+ValueError: I/O operation on closed file.
+Call stack:
+  File "/home/manish/Development/mcp_angelone/venv/lib/python3.12/site-packages/aiohttp/client.py", line 363, in __del__
+    self._loop.call_exception_handler(context)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1847, in call_exception_handler
+    self.default_exception_handler(context)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1821, in default_exception_handler
+    logger.error('\n'.join(log_lines), exc_info=exc_info)
+Message: 'Unclosed client session\nclient_session: <aiohttp.client.ClientSession object at 0x716dd88a2450>'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+ValueError: I/O operation on closed file.
+Call stack:
+  File "/home/manish/Development/mcp_angelone/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 285, in __del__
+    self._loop.call_exception_handler(context)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1847, in call_exception_handler
+    self.default_exception_handler(context)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1821, in default_exception_handler
+    logger.error('\n'.join(log_lines), exc_info=exc_info)
+Message: "Unclosed connector\nconnections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x716dd88addf0>, 96134.318028672)]']\nconnector: <aiohttp.connector.TCPConnector object at 0x716dd88a1910>"
+Arguments: ()
