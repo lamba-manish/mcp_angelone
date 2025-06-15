@@ -274,8 +274,9 @@ The bot provides structured logging for monitoring:
 
 ## 📄 **Author**
 
--manishlamba002@gmail.com
--https://www.linkedin.com/in/manish--lamba/
+- manishlamba002@gmail.com
+
+- https://www.linkedin.com/in/manish--lamba/
 
 ---
 
